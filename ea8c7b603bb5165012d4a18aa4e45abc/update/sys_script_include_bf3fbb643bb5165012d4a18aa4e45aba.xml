@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sgpt_demo1.SC</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SC</name>
+        <script><![CDATA[var SC = Class.create();
+SC.prototype = {
+    initialize: function() {
+    },
+
+    type: 'SC'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>gaurav.verma</sys_created_by>
+        <sys_created_on>2024-11-08 08:21:21</sys_created_on>
+        <sys_id>bf3fbb643bb5165012d4a18aa4e45aba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SC</sys_name>
+        <sys_package display_value="Demo1" source="x_sgpt_demo1">ea8c7b603bb5165012d4a18aa4e45abc</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Demo1">ea8c7b603bb5165012d4a18aa4e45abc</sys_scope>
+        <sys_update_name>sys_script_include_bf3fbb643bb5165012d4a18aa4e45aba</sys_update_name>
+        <sys_updated_by>gaurav.verma</sys_updated_by>
+        <sys_updated_on>2024-11-08 08:21:21</sys_updated_on>
+    </sys_script_include>
+</record_update>
