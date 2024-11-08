@@ -1,4 +1,4 @@
-name: pipeline
+name: pipeline123
 on:
   pull_request:
   push:
@@ -18,7 +18,7 @@ jobs:
 
     steps:
 
-      - name: ServiceNow CI/CD Apply Changes
+      - name: ServiceNow CI/CD Apply Changes123
         uses: ServiceNow/sncicd-apply-changes@2.0.0
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
@@ -26,7 +26,7 @@ jobs:
           nowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
 
-      - name: ServiceNow CI/CD Publish App
+      - name: ServiceNow CI/CD Publish App123
         id: publish_app
         uses: ServiceNow/sncicd-publish-app@2.0.1
         with:
@@ -60,7 +60,7 @@ jobs:
     # if: ${{ github.event_name == 'pull_request'}}
     
     steps:
-      - name: ServiceNow CI/CD Install App
+      - name: ServiceNow CI/CD Install App123
         id: install_app
         uses: ServiceNow/sncicd-install-app@2.0.0
         with:
@@ -87,7 +87,7 @@ jobs:
           nowPassword: ${{ secrets.SN_PASSWORD }}
           nowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
 
-      - name: ServiceNow CI/CD Rollback App
+      - name: ServiceNow CI/CD Rollback App123
         if: ${{ failure() && steps.install_app.outputs.rollbackVersion }}
         uses: ServiceNow/sncicd-rollback-app@2.0.0
         with:
@@ -139,7 +139,7 @@ jobs:
           change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}}'          
           interval: '100'
           timeout: '3600'
-      - name: ServiceNow CI/CD Install App
+      - name: ServiceNow CI/CD Install App123
         id: install_app_prod
         uses: ServiceNow/sncicd-install-app@2.0.0
         with:
