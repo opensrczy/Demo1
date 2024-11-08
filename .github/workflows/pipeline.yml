@@ -1,4 +1,4 @@
-name: ServiceNow GitHub Actions Demo for Accoun4
+name: ServiceNow GitHub Actions Demo for Demo1
 
 on:
   pull_request:
@@ -18,7 +18,7 @@ jobs:
 
     steps:
 
-      - name: ServiceNow CI/CD Apply Changes for Account4
+      - name: ServiceNow CI/CD Apply Changes for Demo1
         uses: ServiceNow/sncicd-apply-changes@2.0.0
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
